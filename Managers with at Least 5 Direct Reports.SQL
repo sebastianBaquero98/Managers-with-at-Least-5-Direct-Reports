@@ -1,0 +1,7 @@
+# Count number of employees who have the same managerId
+SELECT
+    a.name
+FROM
+    Employee as a JOIN Employee as b ON a.id = b.managerId    
+GROUP BY b.managerId
+HAVING COUNT(b.managerId) >=5 
